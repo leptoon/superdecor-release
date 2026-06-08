@@ -1,6 +1,6 @@
 # SuperDecor
 
-**SuperDecor** is a decoration framework for **Supermarket Simulator**. It empowers creativity for players and creators, opening the door to create the store of your dreams. SuperDecor transforms Supermarket Simulator into a creative sandbox and exposes a public API for expansion content.
+**SuperDecor** is a decoration framework for **Supermarket Simulator**. It gives players and creators the tools to build the store they want, turning the game into a creative sandbox with a public API for expansion content.
 
 Items can be simple static props, animated decor like a spinning sign or a working clock, or interactive pieces that respond to the player. It's compatible with the IL2CPP version of the game.
 
@@ -30,6 +30,11 @@ This repo is mostly for creators who want to make expansion content for SuperDec
 Full details and the keybinds are in [In-game features](docs/FEATURES.md).
 
 ## For players
+
+### Requirements
+
+- Supermarket Simulator, the current Unity 6 / IL2CPP version.
+- Tobey's BepInEx Pack for Supermarket Simulator, the IL2CPP variant (0.10.0 or later).
 
 ### Install the mod
 
@@ -85,7 +90,7 @@ Items from a removed pack stop loading, and placements of those specific items a
 SuperDecor loads through BepInEx, and a large game update can break BepInEx mods until they are updated. If decor stops loading after an update, check back here for a new build.
 
 **Does it work in co-op?**
-SuperDecor is built for singleplayer. I do not test co-op and cannot promise it works there.
+SuperDecor is built for singleplayer. I do not test co-op and cannot promise it works there. Co-op is on the planned-updates list below.
 
 **Do players who install my pack need anything?**
 They need the base SuperDecor mod and Tobey's BepInEx pack. Your pack is a drop-in `.zip` on top of that.
@@ -99,6 +104,9 @@ Yes, except for `packId` and each item's `internalName`. Those set the permanent
 **My item is not showing up. What should I check?**
 Confirm the base mod loaded, the pack is in the Packs folder, the model path matches the file on disk, and each `internalName` is unique within the pack. `BepInEx/LogOutput.log` lists registration warnings. See [Creating packs](docs/CREATING_PACKS.md) for more.
 
+**Does it affect performance?**
+Decor items are just meshes and materials. Keep models reasonable (a few thousand triangles and modest textures), and a normal amount of decor has little impact.
+
 ## Planned updates
 
 This is a rough direction, not a promise, and it will change. I will keep this list updated.
@@ -106,6 +114,7 @@ This is a rough direction, not a promise, and it will change. I will keep this l
 - More first-party decor packs.
 - In-game playback for placement and interaction sounds (packs can already define them).
 - Animated textures (scrolling and flipbook materials).
+- Co-op testing and support. SuperDecor is built for singleplayer today.
 
 ## Known issues
 
