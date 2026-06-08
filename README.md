@@ -1,11 +1,10 @@
 # SuperDecor
 
-**SuperDecor** is a decoration framework for **Supermarket Simulator**. It lets you place decorative items
-in your store and gives anyone the tools to create more. Items can be simple static props, animated decor
-like a spinning sign or a working clock, or, with a code pack, interactive pieces that respond to the
-player. It runs on BepInEx 6 for the Unity 6 (IL2CPP) version of the game.
+**SuperDecor** is a decoration framework for **Supermarket Simulator**. It empowers creativity for players and creators, opening the door to create the store of your dreams. SuperDecor transforms Supermarket Simulator into a creative sandbox and exposes a public API for expansion content.
 
-This repository is the public home for SuperDecor and everything around it:
+Items can be simple static props, animated decor like a spinning sign or a working clock, or interactive pieces that respond to the player. It's compatible with the IL2CPP version of the game.
+
+This repo is mostly for creators who want to make expansion content for SuperDecor. My goal is to make it as easy as possible for anyone to create their own SuperDecor packs for release on Nexus or for personal use.
 
 | What | Where |
 |---|---|
@@ -13,9 +12,10 @@ This repository is the public home for SuperDecor and everything around it:
 | **SuperDecor mod**, downloadable builds (also on [Nexus Mods](https://www.nexusmods.com/supermarketsimulator/mods/1225)) | [Releases](https://github.com/leptoon/superdecor-release/releases) |
 | **First-party decor content**, official packs by Leptoon | [`packs/`](packs/) and [Releases](https://github.com/leptoon/superdecor-release/releases) |
 
-> **Status:** SuperDecor for the current Supermarket Simulator (Unity 6 + IL2CPP) is **complete**, with
-> decoration placement and editing, animated decor, and a built-in decor shop. The first public release
-> will be posted here and on Nexus once final testing wraps. The Expansion Pack Generator above is live.
+> **SuperDecor runs on the current version of Supermarket Simulator (Unity 6, IL2CPP).** Get it from the
+> [Releases](https://github.com/leptoon/superdecor-release/releases) page or on
+> [Nexus Mods](https://www.nexusmods.com/supermarketsimulator/mods/1225). The Expansion Pack Generator
+> above is live, so you can start building packs without any other tools.
 
 ## What it does in-game
 
@@ -31,7 +31,7 @@ Full details and the keybinds are in [In-game features](docs/FEATURES.md).
 
 ## For players
 
-### Install the mod *(once a release is published)*
+### Install the mod
 
 1. Install **Tobey's BepInEx Pack for Supermarket Simulator** (the IL2CPP variant, 0.10.0 or later).
 2. Download the latest **SuperDecor** release from the [Releases](https://github.com/leptoon/superdecor-release/releases) page (or from [Nexus Mods](https://www.nexusmods.com/supermarketsimulator/mods/1225)).
@@ -66,6 +66,57 @@ breaks existing saves, so treat those names as permanent once a pack is released
 - [Code packs](docs/CODE_PACKS.md): building a C# pack, the spawn hook, and a complete example.
 - [API reference](docs/API_REFERENCE.md): the manifest schema, the C# API, and the deterministic-ID rules.
 - [Changelog](CHANGELOG.md): release history.
+
+## FAQ
+
+**Do I need to code or use Unity to make decor?**
+No. The Expansion Pack Generator is a browser tool with no code and nothing to install. You only need C# (a code pack) if you want custom behavior such as a light or particles.
+
+**Where do expansion packs go?**
+Drop a pack's `.zip` into `<game>/BepInEx/plugins/SuperDecor/Packs/`. No unzip needed. It shows up in the Furnitures page and the decor shop.
+
+**Is it save-safe? Will my placed decor stay put?**
+Yes. Every item has a stable ID built from its pack and item names, so placements survive reinstalls and updates, as long as a pack does not rename those two values.
+
+**What happens if I remove a pack or the mod?**
+Items from a removed pack stop loading, and placements of those specific items are dropped the next time you load. The rest of your store is fine. Removing the whole mod removes all SuperDecor items.
+
+**Will a game update break it?**
+SuperDecor loads through BepInEx, and a large game update can break BepInEx mods until they are updated. If decor stops loading after an update, check back here for a new build.
+
+**Does it work in co-op?**
+SuperDecor is built for singleplayer. I do not test co-op and cannot promise it works there.
+
+**Do players who install my pack need anything?**
+They need the base SuperDecor mod and Tobey's BepInEx pack. Your pack is a drop-in `.zip` on top of that.
+
+**Can I share or sell the packs I make?**
+Yes. The framework, the generator, and the documentation are Apache 2.0, so you are free to build and distribute packs. The assets in your pack are yours. Please do not reuse the first-party Leptoon assets; those are All Rights Reserved.
+
+**Can I change my pack after I release it?**
+Yes, except for `packId` and each item's `internalName`. Those set the permanent in-game IDs; rename them and players lose their placements of that item. Names, prices, models, and everything else are safe to change.
+
+**My item is not showing up. What should I check?**
+Confirm the base mod loaded, the pack is in the Packs folder, the model path matches the file on disk, and each `internalName` is unique within the pack. `BepInEx/LogOutput.log` lists registration warnings. See [Creating packs](docs/CREATING_PACKS.md) for more.
+
+## Planned updates
+
+This is a rough direction, not a promise, and it will change. I will keep this list updated.
+
+- More first-party decor packs.
+- In-game playback for placement and interaction sounds (packs can already define them).
+- Animated textures (scrolling and flipbook materials).
+
+## Known issues
+
+- Glass and water render as translucent rather than refractive. This is a limit of the runtime renderer, not a problem with your model.
+- Placement and interaction sounds that a pack defines are read but do not play yet (see Planned updates).
+
+Found something else? Report it on the [issues](https://github.com/leptoon/superdecor-release/issues) page here or on the Bugs tab on Nexus.
+
+## Credits
+
+SuperDecor is built on [BepInEx](https://github.com/BepInEx/BepInEx) and loads through Tobey's BepInEx Pack for Supermarket Simulator. Thanks to those projects and to the Supermarket Simulator modding community.
 
 ## License
 
