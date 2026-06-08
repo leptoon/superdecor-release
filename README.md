@@ -65,6 +65,7 @@ breaks existing saves, so treat those names as permanent once a pack is released
 - [Creating packs](docs/CREATING_PACKS.md): the no-code path, the generator, and asset prep.
 - [Code packs](docs/CODE_PACKS.md): building a C# pack, the spawn hook, and a complete example.
 - [API reference](docs/API_REFERENCE.md): the manifest schema, the C# API, and the deterministic-ID rules.
+- [Changelog](CHANGELOG.md): release history.
 
 ## License
 

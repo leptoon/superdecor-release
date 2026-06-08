@@ -1,3 +1,9 @@
-# Local, owner-only drafts (Nexus description, release-note drafts, and similar).
-# These are working copies, not published content. Keep them out of the repo.
+# Local-only working files. Not published content. Keep them out of the repo.
+
+# Drafts (Nexus description, release-note drafts, and similar).
 drafts/
+
+# Machine-local agent instructions (see the header inside CLAUDE.md). Not published.
+CLAUDE.md
+AGENTS.md
+.claude/
