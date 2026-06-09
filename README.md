@@ -114,17 +114,18 @@ This is a rough direction, not a promise, and it will change. I will keep this l
 - In-game playback for placement and interaction sounds (packs can already define them).
 - Animated textures (scrolling and flipbook materials).
 - Co-op testing and support. SuperDecor is built for singleplayer today.
+- Snap grid (game devs are working on this, waiting for them)
 
 ## Known issues
 
 - Glass and water render as translucent rather than refractive. This is a limit of the runtime renderer, not a problem with your model.
 - Placement and interaction sounds that a pack defines are read but do not play yet (see Planned updates).
 
-Found something else? Report it on the [issues](https://github.com/leptoon/superdecor-release/issues) page here or on the Bugs tab on Nexus.
+Found something else? [PM me on Nexus Mods](https://forums.nexusmods.com/profile/4786734-leptoon/). Alternatively, report it on the [issues](https://github.com/leptoon/superdecor-release/issues) page here or on the Bugs tab on Nexus.
 
 ## Credits
 
-SuperDecor is built on [BepInEx](https://github.com/BepInEx/BepInEx) and loads through Tobey's BepInEx Pack for Supermarket Simulator. Thanks to those projects and to the Supermarket Simulator modding community.
+SuperDecor is built on [BepInEx](https://www.nexusmods.com/supermarketsimulator/mods/9) and loads through Tobey's BepInEx Pack for Supermarket Simulator. Thanks to those projects and to the Supermarket Simulator modding community.
 
 ## License
 
