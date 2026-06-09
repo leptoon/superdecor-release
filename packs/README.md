@@ -9,4 +9,4 @@ To make a pack, see [Creating packs](../docs/CREATING_PACKS.md) (no code) or [Co
 - **First-party packs** (by Leptoon) are published as `.zip` assets on the [Releases](https://github.com/leptoon/superdecor-release/releases) page. Their decor assets are All Rights Reserved; see the root [README](../README.md#license).
 - **Community packs:** authors host their own; notable ones may be linked here.
 
-*No first-party packs are published yet; this is their home once the IL2CPP release ships.*
+*No first-party packs are published yet; they will appear here and on the [Releases](https://github.com/leptoon/superdecor-release/releases) page as they are released.*

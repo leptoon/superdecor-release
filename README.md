@@ -51,7 +51,7 @@ There are two ways to build a pack, and both register the same items with the sa
 
 - **No code (the common case).** Open the [Expansion Pack Generator](https://leptoon.github.io/superdecor-release/),
   drop in a `.glb` / `.gltf` / `.fbx` / `.obj` model (static or animated), fill in a name, price, and
-  category, and export a `<packId>.zip`. Drop that into `…/SuperDecor/Packs/`. No Unity, no .NET, nothing
+  category, and export a `<packId>.zip`. Drop that into `<game>/BepInEx/plugins/SuperDecor/Packs/`. No Unity, no .NET, nothing
   to compile. See [Creating packs](docs/CREATING_PACKS.md).
 - **With C# (for custom behavior).** When an item needs a light, particles, or logic that reacts to the
   player, write a small code pack. See [Code packs](docs/CODE_PACKS.md).

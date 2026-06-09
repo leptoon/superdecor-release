@@ -19,7 +19,7 @@ not compatible with it.
 - Precision Mode (press G): on-screen move, rotate, and scale gizmos plus a numeric panel, with undo and
   redo, snapping, and a free-fly camera (WASD, ascend and descend, hold the middle mouse button to look).
 - Animated decor that moves on its own, such as a clock, a fan, or a spinning sign.
-- Interactive decor through code packs, including a showcase aquarium with swimming fish, rising bubbles,
+- Interactive decor through code packs, including a Showcase aquarium with swimming fish, rising bubbles,
   and a light you can toggle.
 - Physics decor: props you can bump and roll, such as the Orange Physics Ball. The framework holds them
   steady while you edit and restores their resting place on reload.
@@ -27,7 +27,7 @@ not compatible with it.
   `BepInEx/plugins/SuperDecor/Packs/`.
 - The Expansion Pack Generator, a free browser tool that turns a 3D model into a drop-in pack with no
   code, including animated models.
-- First-party example decor: a starter set plus the showcase aquarium.
+- First-party example decor: a starter set plus the Showcase aquarium.
 - Documentation for players and creators: in-game features, pack authoring, the API reference, and code
   packs.
 

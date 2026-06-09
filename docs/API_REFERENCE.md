@@ -375,6 +375,10 @@ box size. Box size is not set separately. Common references:
 - `3`: medium furniture base
 - `4`: large furniture base
 
+The field defaults to `100` if omitted, which is not one of the presets above. An unrecognized reference
+falls back to a generic box size, so set `2`, `3`, or `4` explicitly to match your item's footprint. The
+generator does this for you through its small, medium, and large presets.
+
 ---
 
 ## Notes
