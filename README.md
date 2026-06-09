@@ -10,7 +10,7 @@ This repo is mostly for creators who want to make expansion content for SuperDec
 
 | What | Where |
 |---|---|
-| **Expansion Pack Generator**, turn a 3D model into a drop-in decor pack with no code | **[Open the tool](https://leptoon.github.io/superdecor-release/)** *(live)* |
+| **Expansion Pack Generator**, turn a 3D model into a drop-in decor pack with no code | **[SuperDecor Expansion Pack Generator](https://leptoon.github.io/superdecor-release/)** |
 | **SuperDecor mod**, downloadable builds (also on [Nexus Mods](https://www.nexusmods.com/supermarketsimulator/mods/1225)) | [Releases](https://github.com/leptoon/superdecor-release/releases) |
 | **First-party decor content**, official packs by Leptoon (none yet) | [`packs/`](packs/) and [Releases](https://github.com/leptoon/superdecor-release/releases) |
 
@@ -111,18 +111,22 @@ Decor items are just meshes and materials. Keep models reasonable (a few thousan
 This is a rough direction, not a promise, and it will change. I will keep this list updated.
 
 - First-party decor packs.
-- In-game playback for placement and interaction sounds (packs can already define them).
+- Inter-mod compatibility hardening
+- In-game playback of scripted sounds (packs can already define them).
 - Animated textures (scrolling and flipbook materials).
 - Co-op testing and support. SuperDecor is built for singleplayer today.
 - Snap grid (game devs are working on this, waiting for them)
 - Select and move multiple items in following mode
 - Change the selected object while in precision mode
+- UI polish, more detailed stats and a debug mode for creators
+- More options for creators, such as store level requirements and custom pack icons/banners
 
 ## Known issues
 
 - Glass and water render as translucent rather than refractive. This is a limit of the runtime renderer, not a problem with your model.
 - Placement and interaction sounds that a pack defines are read but do not play yet (see Planned updates).
 - Objects don't move with you as you WASD in precision mode
+- Some mods break the highlighting system
 
 Found something else? [PM me on Nexus Mods](https://forums.nexusmods.com/profile/4786734-leptoon/). Alternatively, report it on the [issues](https://github.com/leptoon/superdecor-release/issues) page here or on the Bugs tab on Nexus.
 
