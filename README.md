@@ -128,7 +128,7 @@ Found something else? [PM me on Nexus Mods](https://forums.nexusmods.com/profile
 
 ## Credits
 
-SuperDecor is built on [BepInEx](https://www.nexusmods.com/supermarketsimulator/mods/9](https://github.com/bepinex/bepinex) and loads through [Tobey's BepInEx Pack for Supermarket Simulator](https://www.nexusmods.com/supermarketsimulator/mods/9). Thanks to those projects and to the Supermarket Simulator modding community.
+SuperDecor is built on [BepInEx](https://github.com/bepinex/bepinex) and loads through [Tobey's BepInEx Pack for Supermarket Simulator](https://www.nexusmods.com/supermarketsimulator/mods/9). Thanks to those projects and to the Supermarket Simulator modding community.
 
 ## License
 
