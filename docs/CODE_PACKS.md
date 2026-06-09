@@ -181,6 +181,20 @@ and logged, never breaking the spawn). Attached behaviors die with their `GameOb
 A pack that ships its own `MonoBehaviour` must reference `Il2CppInterop.Runtime` and `Il2Cppmscorlib`, as
 shown in the csproj above.
 
+## Physics props
+
+A code pack can turn a decor item into a physics prop: a Rigidbody object the player can bump and roll. The framework handles the difficult parts, so the pack's contribution is small.
+
+Your behavior (attached with `RegisterItemBehavior<T>`) builds the prop: it swaps in the mesh and adds a collider, a tuned dynamic `Rigidbody`, and a physics material. Put the `Rigidbody` on the **root** of the item so its motion saves and reloads correctly.
+
+For any item that carries a dynamic `Rigidbody`, the framework then does the rest automatically:
+
+- It freezes the prop while you select or place it in Decor Edit Mode and restores its dynamic state afterward, so editing never sends it rolling.
+- It captures the prop's rolled position when you select it and when you save, so it never snaps back to where it was first placed.
+- It re-supplies the player's push out on the road, where the stock game push is otherwise dropped for low objects.
+
+Two `Rigidbody` settings matter in practice: use `CollisionDetectionMode.ContinuousSpeculative` so a fast prop does not tunnel through the thin road collider, and a `PhysicsMaterialCombine.Average` friction combine so the prop rolls rather than slides. The first-party Orange Physics Ball (in the test pack) is a complete example: it builds only the sphere, collider, material, and `Rigidbody`, and the framework supplies the editing freeze, the road push, and the save/reload.
+
 ## IL2CPP rules that bite
 
 These trip up developers coming from the old Mono version of the game:
@@ -236,7 +250,7 @@ public sealed class ShowcasePackPlugin : BasePlugin
         {
             InternalName = "aquarium",            // STABLE, never rename
             ItemName = "Aquarium",
-            Description = "A glass aquarium with swimming fish, bubbles, and a light you can switch on and off.",
+            Description = "A glass aquarium with swimming fish, bubbles, and a light you can toggle.",
             Category = DecorCategories.Fixtures,
             Price = 850f,
             BaseReferenceID = 3,
@@ -321,7 +335,7 @@ color through a BepInEx config so players can change them.
 1. `dotnet build -c Release` produces `YourPack.dll`.
 2. Copy it into `<game>/BepInEx/plugins/` (its own subfolder is fine), along with any `.glb` it references.
 3. Launch the game. Watch `<game>/BepInEx/LogOutput.log` for your plugin's lines.
-4. Open the in-game computer, go to Furnitures, then buy and place your item.
+4. Open the in-game computer, open the SuperDecor Shop, then purchase and place your item.
 
 ## Troubleshooting
 

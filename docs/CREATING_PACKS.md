@@ -1,7 +1,7 @@
 # Creating packs (no code)
 
-This is the path for the 95% case: you have a 3D model and want it to show up in Supermarket Simulator as
-a buyable, placeable decoration, without writing any C#, installing Unity, or installing the .NET SDK. If
+This is the path for the 95% case: you have a 3D model and want it to appear in Supermarket Simulator as
+a purchasable, placeable decoration, without writing any C#, installing Unity, or installing the .NET SDK. If
 you can export a `.glb` (or even just an `.fbx` or `.obj`), you can ship a pack.
 
 If you need custom in-game behavior (a toggle, particles, scripted logic), see [Code packs](CODE_PACKS.md)
@@ -39,7 +39,7 @@ install, no account, nothing leaves your machine.
 4. Fill in the short form: display name, description, price, category, a base reference (pick by
    footprint), and placement tags.
 5. The tool renders a store **icon** for you automatically. You can upload your own instead.
-6. If your model is **animated**, turn on **autoplay** and pick the clip in the Animation section. (The
+6. If your model is **animated**, enable **autoplay** and select the clip in the Animation section. (The
    section only appears when your file actually contains an animation. If it is missing, your export
    dropped the clip; see [Asset tips](#asset-tips).)
 7. Click **Export data pack**. You get a `<packId>.zip`. Drop it into
@@ -95,7 +95,7 @@ Animated decor is a normal data pack with an animated `.glb`. The framework play
 - Put the motion in an animation clip and give it a clear name (`Spin`, `Idle`, `Swim`).
 - Export with animation enabled, then confirm the clip survived by opening the `.glb` in any glTF viewer.
   If there is no animation track, it will not play in-game.
-- In the generator (or the manifest), turn on autoplay and select the clip.
+- In the generator (or the manifest), enable autoplay and select the clip.
 
 The framework supports node motion (a spinning blade), morph or blend-shape deformation, and full
 skeletal rigs (a fish that bends as it swims).
@@ -116,8 +116,8 @@ the folder. That is exactly what the generator produces. The full schema is in t
 
 1. Copy the `.zip` (or the extracted `<packId>/` folder) into
    `<game>/BepInEx/plugins/SuperDecor/Packs/`.
-2. Launch the game. Open the in-game computer, go to **Furnitures**, find your item, buy it, and place it.
-3. If an item does not show up, the most common causes are a malformed `manifest.json`, a `model` path
+2. Launch the game. Open the in-game computer, open the **SuperDecor Shop**, locate your item, purchase it, and place it.
+3. If an item does not appear, the most common causes are a malformed `manifest.json`, a `model` path
    that does not match the file on disk, or a duplicate `internalName` within the pack. Check
    `BepInEx/LogOutput.log` for registration warnings.
 

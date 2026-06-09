@@ -10,16 +10,19 @@ not compatible with it.
 
 ### Added
 
-- Buy and place decorative items from the game's Furnitures page.
-- A built-in decor shop: browse installed items by category, open a detail panel, and buy through the
-  game's normal purchase flow. Installed packs show up automatically.
+- Purchase and place decorative items throughout your store.
+- A built-in SuperDecor Shop: browse installed decor by category, inspect it in a detail panel, and
+  purchase it through the game's standard checkout. Expansion decor is sold through the Shop and kept off
+  the vanilla Furnitures page by default (configurable). Newly installed packs appear automatically.
 - Decor Edit Mode (press B): pick up a placed item, reposition it, change its height, rotate it, nudge it
   along the surface, and swap your selection, with highlight outlines.
 - Precision Mode (press G): on-screen move, rotate, and scale gizmos plus a numeric panel, with undo and
-  redo and snapping.
+  redo, snapping, and a free-fly camera (WASD, ascend and descend, hold the middle mouse button to look).
 - Animated decor that moves on its own, such as a clock, a fan, or a spinning sign.
 - Interactive decor through code packs, including a showcase aquarium with swimming fish, rising bubbles,
-  and a light you can switch on and off.
+  and a light you can toggle.
+- Physics decor: props you can bump and roll, such as the Orange Physics Ball. The framework holds them
+  steady while you edit and restores their resting place on reload.
 - An expansion-pack ecosystem: install a pack by dropping its `.zip` into
   `BepInEx/plugins/SuperDecor/Packs/`.
 - The Expansion Pack Generator, a free browser tool that turns a 3D model into a drop-in pack with no

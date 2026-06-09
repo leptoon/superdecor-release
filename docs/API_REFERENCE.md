@@ -45,7 +45,7 @@ The loader reads both extracted `<packId>/` folders and `<packId>.zip` archives.
       "internalName": "modern_lamp",       // STABLE, feeds the permanent ID, never rename
       "displayName": "Modern Lamp",
       "description": "A sleek LED floor lamp.",
-      "category": "Lighting",              // organizational; groups items in the decor shop
+      "category": "Lighting",              // groups the item in the SuperDecor Shop
       "price": 150.0,
       "baseReferenceId": 2,                // base furniture to clone, also sets the box size
 
@@ -92,9 +92,9 @@ The loader reads both extracted `<packId>/` folders and `<packId>.zip` archives.
 | Field | Type | Default | What it does |
 |---|---|---|---|
 | `internalName` | string | (required) | **permanent**, feeds the ID; `lowercase_with_underscores`, unique in the pack |
-| `displayName` | string | `internalName` | name shown in the Furnitures page and shop |
+| `displayName` | string | `internalName` | name shown in the SuperDecor Shop |
 | `description` | string | empty | shown in the shop detail panel |
-| `category` | string | `"Fixtures"` | groups items in the decor shop; the Furnitures page shows all items regardless |
+| `category` | string | `"Fixtures"` | groups items in the SuperDecor Shop; expansion decor is hidden from the vanilla Furnitures page by default (config `HideExpansionFromVanillaPage`) |
 | `price` | number | `100` | purchase price; sell price is automatically 50% |
 | `baseReferenceId` | int | `100` | base furniture to clone, which also sets the box size |
 | `model` | string | empty | the item's `.glb` path |
@@ -359,8 +359,8 @@ public class ExpansionPackInfo
 
 ### DecorCategories
 
-Standard category strings. They group items in the decor shop; the Furnitures page shows everything
-regardless.
+Standard category strings. They group items in the SuperDecor Shop; expansion decor is hidden from the
+vanilla Furnitures page by default.
 
 ```
 Fixtures, WallDecor, FloorDecor, Lighting, Outdoor, Seasonal, Furniture, Decorations
