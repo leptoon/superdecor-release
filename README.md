@@ -115,11 +115,14 @@ This is a rough direction, not a promise, and it will change. I will keep this l
 - Animated textures (scrolling and flipbook materials).
 - Co-op testing and support. SuperDecor is built for singleplayer today.
 - Snap grid (game devs are working on this, waiting for them)
+- Select and move multiple items in following mode
+- Change the selected object while in precision mode
 
 ## Known issues
 
 - Glass and water render as translucent rather than refractive. This is a limit of the runtime renderer, not a problem with your model.
 - Placement and interaction sounds that a pack defines are read but do not play yet (see Planned updates).
+- Objects don't move with you as you WASD in precision mode
 
 Found something else? [PM me on Nexus Mods](https://forums.nexusmods.com/profile/4786734-leptoon/). Alternatively, report it on the [issues](https://github.com/leptoon/superdecor-release/issues) page here or on the Bugs tab on Nexus.
 
