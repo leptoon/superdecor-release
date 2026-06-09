@@ -2,7 +2,7 @@
 
 This is the path most people will take, you have a 3D model and want it to appear in Supermarket Simulator as
 a purchasable, placeable decoration, without writing any C#, installing Unity, or installing the .NET SDK. If
-you can export a `.glb` (or even just an `.fbx` or `.obj`), you can ship a pack.
+you can export a `.glb` (or even just an `.fbx` or `.obj`), you can make a pack.
 
 If you need custom in-game behavior (a toggle, particles, scripted logic), see [Code packs](CODE_PACKS.md)
 instead. Everything else, including meshes, materials, textures, placement rules, price, and animation, is
@@ -22,7 +22,7 @@ com.yourname.yourpack/
   icons/coffee_machine.png      optional store icon (the generator can render this for you)
 ```
 
-Ship that folder as a `.zip`. Players drop it into `BepInEx/plugins/SuperDecor/Packs/`. Done.
+Release that folder as a `.zip`. Players drop it into `BepInEx/plugins/SuperDecor/Packs/`. Done.
 
 ## The recommended path: the Expansion Pack Generator
 
