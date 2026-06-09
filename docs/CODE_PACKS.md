@@ -251,7 +251,7 @@ public sealed class ShowcasePackPlugin : BasePlugin
             InternalName = "aquarium",            // STABLE, never rename
             ItemName = "Aquarium",
             Description = "A glass aquarium with swimming fish, bubbles, and a light you can toggle.",
-            Category = DecorCategories.Fixtures,
+            Category = DecorCategories.Misc,
             Price = 850f,
             BaseReferenceID = 3,
             MeshAssetName = "aquarium.glb",       // shipped beside the DLL

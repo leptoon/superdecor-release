@@ -94,7 +94,7 @@ The loader reads both extracted `<packId>/` folders and `<packId>.zip` archives.
 | `internalName` | string | (required) | **permanent**, feeds the ID; `lowercase_with_underscores`, unique in the pack |
 | `displayName` | string | `internalName` | name shown in the SuperDecor Shop |
 | `description` | string | empty | shown in the shop detail panel |
-| `category` | string | `"Fixtures"` | groups items in the SuperDecor Shop; expansion decor is hidden from the vanilla Furnitures page by default (config `HideExpansionFromVanillaPage`) |
+| `category` | string | `"Misc"` | groups items in the SuperDecor Shop; expansion decor is hidden from the vanilla Furnitures page by default (config `HideExpansionFromVanillaPage`) |
 | `price` | number | `100` | purchase price; sell price is automatically 50% |
 | `baseReferenceId` | int | `100` | base furniture to clone, which also sets the box size |
 | `model` | string | empty | the item's `.glb` path |
@@ -286,7 +286,7 @@ public class DecorItemData
     public string InternalName { get; set; }        // STABLE, feeds the ID (required)
     public string ItemName { get; set; }            // display name
     public string Description { get; set; }
-    public string Category { get; set; }            // = "Fixtures"; groups items in the shop
+    public string Category { get; set; }            // = "Misc"; groups items in the shop
     public int    FurnitureID { get; internal set; } // framework-assigned; you never set it
 
     // Economic
@@ -360,11 +360,27 @@ public class ExpansionPackInfo
 ### DecorCategories
 
 Standard category strings. They group items in the SuperDecor Shop; expansion decor is hidden from the
-vanilla Furnitures page by default.
+vanilla Furnitures page by default. The set sorts on one axis, what an item is. Where it goes is the
+separate placement-tags field.
 
 ```
-Fixtures, WallDecor, FloorDecor, Lighting, Outdoor, Seasonal, Furniture, Decorations
+WallArt, Signage, Sculptures, Plants, Lighting, Furniture, Rugs, Seasonal, Outdoor, Misc
 ```
+
+| Category | Covers |
+|---|---|
+| `WallArt` | framed art, paintings, posters, prints, mirrors, wall clocks |
+| `Signage` | store signs, banners, neon signs, price and sale boards, hanging signs |
+| `Sculptures` | statues, busts, figurines, abstract and modern art pieces |
+| `Plants` | potted plants, planters, trees, flowers, greenery |
+| `Lighting` | lamps, sconces, string and neon lights, light fixtures |
+| `Furniture` | benches, chairs, tables, stools, decorative shelving and display units |
+| `Rugs` | rugs, mats, runners, floor decals |
+| `Seasonal` | holiday and event-themed decor (Christmas, Halloween, and so on) |
+| `Outdoor` | storefront, garden, patio, and parking-lot decor |
+| `Misc` | anything that does not fit the buckets above, and the default when none is set |
+
+Any other string also works; it shows in the shop as its own tab.
 
 ### Base reference IDs
 
