@@ -12,7 +12,7 @@ This repo is mostly for creators who want to make expansion content for SuperDec
 |---|---|
 | **Expansion Pack Generator**, turn a 3D model into a drop-in decor pack with no code | **[Open the tool](https://leptoon.github.io/superdecor-release/)** *(live)* |
 | **SuperDecor mod**, downloadable builds (also on [Nexus Mods](https://www.nexusmods.com/supermarketsimulator/mods/1225)) | [Releases](https://github.com/leptoon/superdecor-release/releases) |
-| **First-party decor content**, official packs by Leptoon | [`packs/`](packs/) and [Releases](https://github.com/leptoon/superdecor-release/releases) |
+| **First-party decor content**, official packs by Leptoon (none yet) | [`packs/`](packs/) and [Releases](https://github.com/leptoon/superdecor-release/releases) |
 
 > **SuperDecor runs on the current version of Supermarket Simulator (Unity 6, IL2CPP).** Download it from
 > the [Releases](https://github.com/leptoon/superdecor-release/releases) page or from
@@ -23,7 +23,7 @@ This repo is mostly for creators who want to make expansion content for SuperDec
 
 - Purchase decor from the built-in **SuperDecor Shop**, which presents every installed item by category. (Expansion decor is kept off the vanilla Furnitures page by default; a config option restores it there.)
 - Refine placement with two editing modes: **Decor Edit Mode** (select, reposition, nudge, rotate, swap) and **Precision Mode** (on-screen move/rotate/scale gizmos, a numeric panel, undo/redo, and a free-fly camera).
-- Animated decor moves on its own; interactive decor from code packs responds to the player (the Showcase aquarium, for instance, has a light you can toggle); and physics decor can be bumped and rolled around the store.
+- Animated decor moves on its own; interactive decor from code packs responds to the player; and physics decor can be bumped and rolled around the store.
 - Add more decor by installing expansion packs.
 
 Full details and the keybinds are in [In-game features](docs/FEATURES.md).
@@ -110,7 +110,7 @@ Decor items are just meshes and materials. Keep models reasonable (a few thousan
 
 This is a rough direction, not a promise, and it will change. I will keep this list updated.
 
-- More first-party decor packs.
+- First-party decor packs.
 - In-game playback for placement and interaction sounds (packs can already define them).
 - Animated textures (scrolling and flipbook materials).
 - Co-op testing and support. SuperDecor is built for singleplayer today.
