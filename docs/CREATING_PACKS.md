@@ -1,6 +1,6 @@
 # Creating packs (no code)
 
-This is the path for the 95% case: you have a 3D model and want it to appear in Supermarket Simulator as
+This is the path most people will take, you have a 3D model and want it to appear in Supermarket Simulator as
 a purchasable, placeable decoration, without writing any C#, installing Unity, or installing the .NET SDK. If
 you can export a `.glb` (or even just an `.fbx` or `.obj`), you can ship a pack.
 
