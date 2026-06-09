@@ -2,7 +2,8 @@
 
 All notable changes to SuperDecor. The newest release is at the top. Dates are year-month-day.
 
-## [version] (release date)
+## Framework Version 2.0.1 June 9th 2026
+## API Version 2.2.1 June 9th 2026
 
 The first release of SuperDecor for the current Supermarket Simulator (Unity 6, IL2CPP). This is a
 ground-up rebuild for the new engine. The previous version targeted the old Mono build of the game and is
@@ -27,7 +28,7 @@ not compatible with it.
   `BepInEx/plugins/SuperDecor/Packs/`.
 - The Expansion Pack Generator, a free browser tool that turns a 3D model into a drop-in pack with no
   code, including animated models.
-- First-party example decor: a starter set plus the Showcase aquarium.
+- First-party test objects: Blue cube, magenta breathing cube, cyan rotating cube, chrome torus, yellow ribbon, orange ball
 - Documentation for players and creators: in-game features, pack authoring, the API reference, and code
   packs.
 
