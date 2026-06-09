@@ -1,4 +1,6 @@
-# SuperDecor
+<p align="center">
+  <img src="assets/superdecor-logo.png" alt="SuperDecor" width="480">
+</p>
 
 **SuperDecor** is a decoration framework for **Supermarket Simulator**. It gives players and creators the tools to build the store they want, turning the game into a creative sandbox with a public API for expansion content.
 
