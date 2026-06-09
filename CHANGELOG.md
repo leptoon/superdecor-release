@@ -28,7 +28,7 @@ not compatible with it.
   `BepInEx/plugins/SuperDecor/Packs/`.
 - The Expansion Pack Generator, a free browser tool that turns a 3D model into a drop-in pack with no
   code, including animated models.
-- First-party test objects: Blue cube, magenta breathing cube, cyan rotating cube, chrome torus, yellow ribbon, orange ball
+- First-party test objects: Blue cube, magenta breathing cube, cyan rotating cube, white rotating cube, chrome torus, yellow ribbon, orange ball
 - Documentation for players and creators: in-game features, pack authoring, the API reference, and code
   packs.
 
