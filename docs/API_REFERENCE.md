@@ -10,7 +10,7 @@ Both produce the **same** items with the **same** permanent IDs, so a pack can m
 code pack later without changing any item ID and without breaking players' saves.
 
 - **Framework:** `com.leptoon.superdecor` (`SuperDecor.dll`).
-- **API version:** `2.2.0`.
+- **API version:** `2.3.0`.
 - **Game:** Supermarket Simulator 9.6.0.0+ (Unity 6, IL2CPP), with Tobey's BepInEx Pack 0.10.0+.
 
 ---
@@ -188,7 +188,7 @@ without a major version bump. For a full walkthrough, see [Code packs](CODE_PACK
 ### Constants
 
 ```csharp
-DecorExpansionAPI.API_VERSION    // "2.2.0"
+DecorExpansionAPI.API_VERSION    // "2.3.0"
 DecorExpansionAPI.BASE_MOD_GUID  // "com.leptoon.superdecor"  (your [BepInDependency] target)
 ```
 

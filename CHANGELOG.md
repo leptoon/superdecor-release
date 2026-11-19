@@ -2,6 +2,40 @@
 
 All notable changes to SuperDecor. The newest release is at the top. Dates are year-month-day.
 
+## Framework Version 2.3.0 July 7th 2026
+## API Version 2.3.0 July 7th 2026
+
+This update localizes SuperDecor's own UI and cleans up the BepInEx config file so settings are easier
+to read and adjust. It does not change the save format or expansion pack IDs.
+
+### Added
+
+- Localized SuperDecor-owned text for the current Steam interface languages: English, French, Italian,
+  German, Spanish, Simplified Chinese, Brazilian Portuguese, Dutch, Japanese, Korean, Portuguese,
+  Russian, Turkish, Danish, Finnish, Polish, Hungarian, Romanian, Czech, and Lithuanian.
+- Localized in-game labels, buttons, tooltips, popups, notifications, status markers, sort labels,
+  empty states, and fallback item or pack names.
+- Localized BepInEx config section names, setting names, and setting descriptions.
+- An embedded localization catalog inside the mod DLL, so the release package includes the language data
+  automatically.
+
+### Changed
+
+- Rewrote awkward config text into clearer, player-facing names and descriptions.
+- Existing config values migrate from the old section and key names to the new names when the mod loads,
+  so current users keep their settings.
+- Runtime UI now follows the game's selected language when possible and falls back to English when a
+  language or string is missing.
+
+### Notes
+
+- Config descriptions are created when the plugin loads. If you change the game language, restart the
+  game before checking the config file text.
+- The public API version is now `2.3.0`, but no public method shape changed in this update.
+- Expansion pack IDs, placed decor saves, and pack install paths are unchanged.
+
+---
+
 ## Framework Version 2.0.1 June 9th 2026
 ## API Version 2.2.1 June 9th 2026
 
