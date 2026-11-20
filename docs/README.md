@@ -33,4 +33,3 @@ nothing leaves your machine.
 
 - **[Main README](../README.md):** what SuperDecor is, how to install it, and a tour of what
   it does.
-- **[Changelog](../CHANGELOG.md):** what changed in each release.
