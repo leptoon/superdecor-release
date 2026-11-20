@@ -11,41 +11,12 @@ This repo is mostly for creators who want to make expansion content for SuperDec
 | What | Where |
 |---|---|
 | **Expansion Pack Generator**, turn a 3D model into a drop-in decor pack with no code | **[SuperDecor Expansion Pack Generator](https://leptoon.github.io/superdecor-release/)** |
-| **SuperDecor mod**, downloadable builds (also on [Nexus Mods](https://www.nexusmods.com/supermarketsimulator/mods/1225)) | [Releases](https://github.com/leptoon/superdecor-release/releases) |
+| **SuperDecor mod**, downloadable builds | [Nexus Mods](https://www.nexusmods.com/supermarketsimulator/mods/1225) |
 | **First-party decor content**, official packs by Leptoon (none yet) | [`packs/`](packs/) and [Releases](https://github.com/leptoon/superdecor-release/releases) |
 
 > **SuperDecor runs on the current version of Supermarket Simulator (Unity 6, IL2CPP).** Download it from
-> the [Releases](https://github.com/leptoon/superdecor-release/releases) page or from
 > [Nexus Mods](https://www.nexusmods.com/supermarketsimulator/mods/1225). The Expansion Pack Generator
 > above is live, so you can begin building packs with no other tools.
-
-## What it does in-game
-
-- Purchase decor from the built-in **SuperDecor Shop**, which presents every installed item by category. (Expansion decor is kept off the vanilla Furnitures page by default; a config option restores it there.)
-- Refine placement with two editing modes: **Decor Edit Mode** (select, reposition, nudge, rotate, swap) and **Precision Mode** (on-screen move/rotate/scale gizmos, a numeric panel, undo/redo, and a free-fly camera).
-- Animated decor moves on its own; interactive decor from code packs responds to the player; and physics decor can be bumped and rolled around the store.
-- Add more decor by installing expansion packs.
-
-Full details and the keybinds are in [In-game features](docs/FEATURES.md).
-
-## For players
-
-### Requirements
-
-- Supermarket Simulator, the current Unity 6 / IL2CPP version.
-- Tobey's BepInEx Pack for Supermarket Simulator, the IL2CPP variant (0.10.0 or later).
-
-### Install the mod
-
-1. Install **Tobey's BepInEx Pack for Supermarket Simulator** (the IL2CPP variant, 0.10.0 or later).
-2. Download the latest **SuperDecor** release from the [Releases](https://github.com/leptoon/superdecor-release/releases) page (or from [Nexus Mods](https://www.nexusmods.com/supermarketsimulator/mods/1225)).
-3. Extract it so that the `SuperDecor/` folder lands in `<game>/BepInEx/plugins/`.
-
-### Add expansion packs
-
-Drop a pack's `.zip` straight into `<game>/BepInEx/plugins/SuperDecor/Packs/`. No extraction is needed: the
-mod reads both `.zip` archives and unpacked `<packId>/` folders. Installed packs appear in the SuperDecor
-Shop automatically.
 
 ## Make your own decor
 
@@ -71,6 +42,34 @@ breaks existing saves, so treat those names as permanent once a pack is released
 - [API reference](docs/API_REFERENCE.md): the manifest schema, the C# API, and the deterministic-ID rules.
 - [Changelog](CHANGELOG.md): release history.
 
+## What it does in-game
+
+- Purchase decor from the built-in **SuperDecor Shop**, which presents every installed item by category. (Expansion decor is kept off the vanilla Furnitures page by default; a config option restores it there.)
+- Refine placement with two editing modes: **Decor Edit Mode** (select, reposition, nudge, rotate, swap) and **Precision Mode** (on-screen move/rotate/scale gizmos, a numeric panel, undo/redo, and a free-fly camera).
+- Animated decor moves on its own; interactive decor from code packs responds to the player; and physics decor can be bumped and rolled around the store.
+- Add more decor by installing expansion packs.
+
+Full details and the keybinds are in [In-game features](docs/FEATURES.md).
+
+## For players
+
+### Requirements
+
+- Supermarket Simulator, the current Unity 6 / IL2CPP version.
+- Tobey's BepInEx Pack for Supermarket Simulator, the IL2CPP variant (0.10.0 or later).
+
+### Install the mod
+
+1. Install **Tobey's BepInEx Pack for Supermarket Simulator** (the IL2CPP variant, 0.10.0 or later).
+2. Download the latest **SuperDecor** release from [Nexus Mods](https://www.nexusmods.com/supermarketsimulator/mods/1225).
+3. Extract it so that the `SuperDecor/` folder lands in `<game>/BepInEx/plugins/`.
+
+### Add expansion packs
+
+Drop a pack's `.zip` straight into `<game>/BepInEx/plugins/SuperDecor/Packs/`. No extraction is needed: the
+mod reads both `.zip` archives and unpacked `<packId>/` folders. Installed packs appear in the SuperDecor
+Shop automatically.
+
 ## FAQ
 
 **Do I need to code or use Unity to make decor?**
@@ -86,7 +85,7 @@ Yes. Every item carries a stable ID derived from its pack and item names, so pla
 Items from a removed pack stop loading, and placements of those specific items are dropped the next time you load. The rest of your store is unaffected. Removing the whole mod removes every SuperDecor item.
 
 **Will a game update break it?**
-SuperDecor loads through BepInEx, and a large game update can break BepInEx mods until they are updated. If decor stops loading after an update, check back here for a new build.
+SuperDecor loads through BepInEx, and a large game update can break BepInEx mods until they are updated. If decor stops loading after an update, check the Nexus page for a new build.
 
 **Does it work in co-op?**
 SuperDecor is built for singleplayer. I do not test co-op and cannot promise it works there. Co-op is on the planned-updates list below.
